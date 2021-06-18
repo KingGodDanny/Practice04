@@ -11,15 +11,16 @@ public class Ex08 {
 		for(int i=0; i<num.length; i++) {
 			num[i] = (int)(Math.random()*45)+1;  
 					
-					if(i>0 && num[i]==num[i-1]) {
-						num[i] = (int)(Math.random()*45)+1;
-						} 							
-							System.out.print(num[i] + "	");
-						
+					for(int j=0; j<i; j++) {
+						if(num[i] == num[j]) {
+							i--;
+						}
 					}
-					
 						
-		
+		}
+		for(int j=0; j<num.length; j++) {
+			System.out.println(num[j]);
+		}
 							
 							
 			
